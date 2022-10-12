@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        "use strict";
+        let a = 34;
+        console.log(a);
+
+        function hello() {
+            console.log("Hey harry!!!");
+        }
+
+        let obja = {
+            r: 34,
+            m: 64,
+            func: function myfun(number) {
+                console.log("The number is:" + number);
+            }
+        }
+
+
+        document.addEventListener("click", function () {
+            console.log("Clicked");
+            // alert("Hello");
+            let conf = confirm("Are you sure?");
+            console.log(conf);
+        })
+
+        setTimeout(() => {  // execute line 35 after 3000ms.
+            console.log("yay");
+        }, 3000);
+        console.log("down part");  // will run before line 35 and not wait
+        
+    </script>
+</head>
+
+<body>
+    <h1>
+        I am learning Javascript for React.
+    </h1>
+</body>
+
+</html>
