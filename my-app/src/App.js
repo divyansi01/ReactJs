@@ -5,12 +5,12 @@ import About from './Components/About';
 import Alert from './Components/Alert';
 import Navbar from './Components/Navbar';
 import TextForm from './Components/TextForm';
-// import {
-//   BrowserRouter as Router,
-//   Routes,
-//   Route,
-//   // Link
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  // Link
+} from "react-router-dom";
 
 function App() {   // function based component 
   const [mode, setMode] = useState('light');
@@ -53,21 +53,21 @@ function App() {   // function based component
   return ( // can return only one element like here div classname = "App" is being returned
     // if you want to return more than one tags like h1 and div then add <.> and </> at the front and at the end.
     <>
-      {/* <Router> */}
-      <Navbar title="My App" mode={mode} toggleMode={toggleMode} redMode={redMode} />
-      {/* <Navbar /> */}
-      <Alert alert={alert} />
-      <div className="container my-3">
-        {/* <Routes> */}
-        {/* <Route exact path="/about" element={<About />}> */}
-        {/* <About aboutText="About" /> */}
-        {/* </Route> */}
-        {/* <Route exact path="/" element={<TextForm showAlert={showAlert} mode={mode} />}> */}
-        <TextForm showAlert={showAlert} Heading="Text Analysis" mode={mode} />
-        {/* </Route>
-          </Routes> */}
-      </div>
-      {/* </Router> */}
+      <Router>
+        <Navbar title="My App" mode={mode} toggleMode={toggleMode} redMode={redMode} />
+        {/* <Navbar /> */}
+        <Alert alert={alert} />
+        <div className="container my-3">
+          <Routes>
+            <Route exact path="/about" element={<About />}>
+              {/* <About aboutText="About" /> */}
+            </Route>
+            <Route exact path="/" element={<TextForm showAlert={showAlert} mode={mode} />}>
+              {/* <TextForm showAlert={showAlert} Heading="Text Analysis" mode={mode} /> */}
+            </Route>
+          </Routes>
+        </div>
+      </Router>
     </>
 
   );
